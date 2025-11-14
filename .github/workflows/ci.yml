@@ -54,6 +54,9 @@ jobs:
       - name: Check Imagick PHP extension
         run: php -r "echo phpversion('imagick');"
 
+      - name: Check ImageMagick via Imagick
+        run: php -r "print_r(Imagick::getVersion());"
+
       - name: Check ImageMagick CLI
         run: magick --version || true
 
