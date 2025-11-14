@@ -62,7 +62,7 @@ jobs:
 
       # --- Snapshot handling ---
       - name: Clean old snapshots
-        run: rm -rf tests/__snapshots__
+        run: rm -rf test/Integration/__snapshots__
 
       - name: Generate fresh snapshots
         run: vendor/bin/phpunit || true
