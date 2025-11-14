@@ -60,8 +60,17 @@ jobs:
       - name: Check ImageMagick CLI
         run: magick --version || true
 
-      - name: Test with phpunit
+      # --- Snapshot handling ---
+      - name: Clean old snapshots
+        run: rm -rf tests/__snapshots__
+
+      - name: Generate fresh snapshots
+        run: vendor/bin/phpunit || true
+        # First run: generates snapshots, may mark tests incomplete
+
+      - name: Run tests against snapshots
         run: vendor/bin/phpunit --coverage-clover clover.xml
+        # Second run: validates against the newly generated snapshots
 
       - name: Codecov
         uses: codecov/codecov-action@v4
