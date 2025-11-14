@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 This file is automatically maintained by release-please.
 
+## [4.0.0](https://github.com/vlakoff/BaconQrCode/compare/v3.0.1...v4.0.0) (2025-11-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for PHP < 8.1
+
+### Features
+
+* add GD image renderer ([#171](https://github.com/vlakoff/BaconQrCode/issues/171)) ([c01758c](https://github.com/vlakoff/BaconQrCode/commit/c01758cc4bf2eb4225b92dae7d766c1a4b069185))
+* drop support for PHP &lt; 8.1 ([2f1e117](https://github.com/vlakoff/BaconQrCode/commit/2f1e117289ad94cfa681ef092e17557f434b35e1))
+* make utf-8 eci prefix configurable ([#130](https://github.com/vlakoff/BaconQrCode/issues/130)) ([1f3e1e9](https://github.com/vlakoff/BaconQrCode/commit/1f3e1e90222057fdc0fdadf2ec9c83a67d1fc03b))
+
+
+### Bug Fixes
+
+* correctly encode kanji bytes ([735e04e](https://github.com/vlakoff/BaconQrCode/commit/735e04e44c8a4544481f218dcea42dacebc2a09c))
+* correctly rotate eyes when using inherited colors ([#174](https://github.com/vlakoff/BaconQrCode/issues/174)) ([b0105c7](https://github.com/vlakoff/BaconQrCode/commit/b0105c7a6fcfbc2396e52c910d73f03bca594adf))
+* make implicitly nullable params explicit ([1b26475](https://github.com/vlakoff/BaconQrCode/commit/1b2647581d70b1bdd1d33e3ce950139eee339829))
+* prevent division by zero in Rgb toCmyk method ([#179](https://github.com/vlakoff/BaconQrCode/issues/179)) ([12338c9](https://github.com/vlakoff/BaconQrCode/commit/12338c9a5a9f0b5edfe6b386a8d4529a7d1fe874))
+* **svg:** generate unique IDs for gradients based on their properties ([#187](https://github.com/vlakoff/BaconQrCode/issues/187)) ([fb48e26](https://github.com/vlakoff/BaconQrCode/commit/fb48e26b6004ca8dee5002dfaa9ca9147f6ebef9)), closes [#186](https://github.com/vlakoff/BaconQrCode/issues/186)
+* use non-locale aware format for scale and translate ([#100](https://github.com/vlakoff/BaconQrCode/issues/100)) ([788bb77](https://github.com/vlakoff/BaconQrCode/commit/788bb77af152abcb938dc8f0af4421084d78b949))
+* **Version:** correct number of EC blocks for version 4 ([9298801](https://github.com/vlakoff/BaconQrCode/commit/92988018b8e3f960944945ae4b9ff158be403fc2))
+
+
+### Miscellaneous Chores
+
+* add test related files to .gitattributes ([3e68a9d](https://github.com/vlakoff/BaconQrCode/commit/3e68a9d37552e5c43c4fd801e66b41033153cba2))
+* bump github action "codecov/codecov-action" 3 =&gt; 4 ([de6217a](https://github.com/vlakoff/BaconQrCode/commit/de6217abb28715a87b62fc104d06439df7df71ac))
+* fix ci deprecations ([1e39f3b](https://github.com/vlakoff/BaconQrCode/commit/1e39f3b6eb67973b47ff63414a1807ae5c09c0b6))
+* fix ci deprecations, run phpcs on php 8.2 ([#140](https://github.com/vlakoff/BaconQrCode/issues/140)) ([c6f79a4](https://github.com/vlakoff/BaconQrCode/commit/c6f79a46f3f0d9d18260f22f4ef5939932469559))
+* **main:** release 3.0.0 ([0b98ac5](https://github.com/vlakoff/BaconQrCode/commit/0b98ac5435735db9d1127b98bdc8e71cddd2a52a))
+* **main:** release 3.0.1 ([2cb4ecf](https://github.com/vlakoff/BaconQrCode/commit/2cb4ecfb9d54a12134feefa97fbf25166e53e438))
+* remove non-required entries from CHANGELOG.md ([151a958](https://github.com/vlakoff/BaconQrCode/commit/151a9586b84738b9d7594149d162a3895e7f1e7e))
+* use wider PHPUnit version constraint ([1e00ebd](https://github.com/vlakoff/BaconQrCode/commit/1e00ebd58b6d13605abed832ad16d73b182efcce))
+
 ## [3.0.1](https://github.com/Bacon/BaconQrCode/compare/v3.0.0...v3.0.1) (2024-10-01)
 
 
