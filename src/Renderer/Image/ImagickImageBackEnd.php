@@ -53,6 +53,9 @@ final class ImagickImageBackEnd implements ImageBackEndInterface
     public function new(int $size, ColorInterface $backgroundColor) : void
     {
         $this->image = new Imagick();
+
+        $this->image->setAntialias(false);
+
         $this->image->newImage($size, $size, $this->getColorPixel($backgroundColor));
         $this->image->setImageFormat($this->imageFormat);
         $this->image->setCompressionQuality($this->compressionQuality);
@@ -214,6 +217,8 @@ final class ImagickImageBackEnd implements ImageBackEndInterface
         $startColor = $this->getColorPixel($gradient->getStartColor())->getColorAsString();
         $endColor = $this->getColorPixel($gradient->getEndColor())->getColorAsString();
         $gradientImage = new Imagick();
+
+        $gradientImage->setAntialias(false);
 
         switch ($gradient->getType()) {
             case GradientType::HORIZONTAL():
