@@ -51,6 +51,12 @@ jobs:
       - name: Install dependencies
         run: composer install --no-progress --prefer-dist --optimize-autoloader
 
+      - name: Check Imagick PHP extension
+        run: php -r "echo phpversion('imagick');"
+
+      - name: Check ImageMagick CLI
+        run: convert --version || true
+
       - name: Test with phpunit
         run: vendor/bin/phpunit --coverage-clover clover.xml
 
